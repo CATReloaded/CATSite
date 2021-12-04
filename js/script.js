@@ -4,21 +4,13 @@ let logo = document.querySelector(".navbar-brand img")
 let sticky = nav.offsetHeight;
 let achievements = document.querySelector('.ourachievments');
 
-<<<<<<< HEAD
-window.onscroll = function() {
-=======
 window.onscroll = function () {
->>>>>>> amr/main
     myFunction();
     scrollFunction();
 
 };
 var fired = false;
-<<<<<<< HEAD
-window.addEventListener("scroll", function() {
-=======
 window.addEventListener("scroll", function () {
->>>>>>> amr/main
     if (window.pageYOffset >= achievements.offsetTop - 200 && fired === false) {
         Counter();
         fired = true;
@@ -56,11 +48,7 @@ function Counter() {
 
 
 function countUp(selector, min, max, duration) {
-<<<<<<< HEAD
-    var inter = setInterval(function() {
-=======
     var inter = setInterval(function () {
->>>>>>> amr/main
         selector.innerHTML = ++min;
         if (min >= max) {
             clearTimeout(inter);
@@ -89,19 +77,11 @@ function backToTop() {
 }
 
 
-<<<<<<< HEAD
-$(function() {
-
-    $(window).on('load', function() {
-
-        $('.loader').find($('img')).fadeOut(3500, function() {
-=======
 $(function () {
 
     $(window).on('load', function () {
 
         $('.loader').find($('img')).fadeOut(3500, function () {
->>>>>>> amr/main
             $('body').css({ "overflow": "auto" });
             $(this).parent().remove();
             $('.mainheader').find($('.overlay')).addClass("animate__backInUp");
@@ -111,8 +91,4 @@ $(function () {
 
     });
 
-<<<<<<< HEAD
-
-=======
->>>>>>> amr/main
 })
