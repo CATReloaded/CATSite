@@ -19,7 +19,7 @@ const renderEvents = (data) => {
       <div class="row g-0">
         <div class="col-md-12 col-lg-4">
           <img
-            src="https://catreloaded.org/media/${data[j].image_file_name}"
+            src="${data[j].image_file_name}"
             class="img-fluid rounded"
             alt="event"
           />
