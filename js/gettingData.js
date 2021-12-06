@@ -1,10 +1,9 @@
 let eventsContainer = Array.from(document.querySelectorAll('.carousel-inner .carousel-item'))
 
 const fetchEvents = () => {
-  fetch(`http://catreloaded.org:8000/event/?page=1&page_size=16`)
+  fetch(`https://catreloaded.org/api/event/?page=1&page_size=16`)
     .then(data => data.json())
     .then(res => {
-      console.log(res)
       renderEvents(res.results)
     })
 }
