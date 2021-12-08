@@ -43,6 +43,7 @@
   </head>
 
   <body>
+    <p class="status"></p>
     <!--start navbar-->
     <nav class="navbar navbar-expand-lg navbar-light sticky" id="nav">
       <div class="container-lg">
@@ -200,6 +201,17 @@
     <section class="contactus">
       <div class="container">
         <h2 class="wow animate__fadeIn" data-wow-duration="2s">Write To Us</h2>
+        <!--Email JS-->
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+          <script type="text/javascript">
+          (function() {
+            emailjs.init("user_CXnSc9teMNJo1f8kazitU");
+            })();
+          </script>
+          
+
+        
+        
         <div class="row justify-content-center align-items-center">
           <form
             class="form-horizontal col-md-10 col-lg-8 wow animate__fadeIn"
@@ -209,6 +221,7 @@
               <div class="mb-3">
                 <input
                   type="text"
+                  id="full_name"
                   class="form-control"
                   placeholder="Full Name"
                   required
@@ -220,6 +233,7 @@
                 <input
                   type="email"
                   class="form-control"
+                  id="email_from"
                   placeholder="Email"
                   required
                 />
@@ -228,14 +242,17 @@
                 <input
                   type="tel"
                   class="form-control"
+                  id="phone"
                   placeholder="Phone"
                   required
+                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
                 />
               </div>
             </div>
             <div class="row">
               <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Subject" />
+                <input type="text" class="form-control" id="subject" placeholder="Subject" />
               </div>
             </div>
 
@@ -243,6 +260,7 @@
               <div class="mb-3">
                 <textarea
                   class="form-control"
+                  id="message"
                   placeholder="Message"
                   rows="10"
                 ></textarea>
@@ -251,7 +269,7 @@
 
             <div class="row">
               <div class="mb-3">
-                <button type="submit" class="btn outline-cat-button active">
+                <button type="submit" id="btn" class="btn outline-cat-button active">
                   send Message
                 </button>
               </div>
@@ -435,5 +453,6 @@
     <script>
       new WOW().init();
     </script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

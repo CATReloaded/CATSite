@@ -20,7 +20,20 @@
   --footerP: #ffffffb8;
   --transparentContact: rgba(112, 112, 112, 0.1);
 }
-
+.status {
+  position: sticky;
+  top: -1500px;
+  z-index: 1000;
+  text-align: center;
+  transition: 1s ease-in-out;
+}
+.ok {
+  background-color: greenyellow;
+}
+.fail {
+  color: wheat;
+  background-color: var(--dark-red);
+}
 *::selection {
   background-color: var(--red);
   color: var(--white);
