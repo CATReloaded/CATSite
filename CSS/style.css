@@ -1243,6 +1243,7 @@ section.Hierarchy img {
 section.Hierarchy li h4,
 section.Board h4 {
   font-size: 20px;
+  text-align: center;
 }
 
 section.Board ul {
