@@ -136,6 +136,8 @@ button:focus:not(:focus-visible) {
     var(--light-white),
     var(--transparent-grey)
   );
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .newsletter .btn:hover {
