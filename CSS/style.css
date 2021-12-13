@@ -1672,9 +1672,11 @@ body {
   top: 100px;
 }
 
-/* .events .card-body {
-  height: 320px;
-} */
+@media (min-width: 990px) {
+  .events .card-body {
+    height: 334px;
+  }
+}
 
 #padding li {
   margin-bottom: 15px;
